@@ -13,11 +13,11 @@ point input(){
 }
 int dist(point a,point b, float res)
 {
-  res=(a.x-b.x)+(a.y-b.y);
+  res=sqrt(pow((b.x-a.x),2)+pow((b.y-a.y),2));
     return res;
 }
 void output(point a,point b,float res){
-  printf("distance between(%1.f,%1.f) and(%1.f,%1.f) is %2.f",a.x,a.y,b.x,b.y,res);
+  printf("distance between(%.1f,%.1f) and(%.1f,%.1f) is %.1f",a.x,a.y,b.x,b.y,res);
 }
 int main(){
 point a,b;
