@@ -2,9 +2,9 @@
 int main()
 {
   int a,b,c,largest;
-  a=input(&a);
-  b=input(&b);
-  c=input(&c);
+  a=input();
+  b=input();
+  c=input();
   largest=compare(a,b,c,largest);
   output(a,b,c,largest);
 }
@@ -20,16 +20,16 @@ int largest;
 
 if((a>b)&&(a>c))
 {
-  *largest=a;
+  largest=a;
 }
 else if((b>c)&&(c>a))
   {
   largest=b;
   }
 else
-  if((*c>*a)&&(*a>*b))
+  if((c>a)&&(a>b))
   {
-  *largest=c;
+  largest=c;
   }
 return largest;}
 
