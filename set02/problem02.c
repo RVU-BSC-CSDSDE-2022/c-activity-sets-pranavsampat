@@ -7,7 +7,7 @@ void input_details(float *radius,float *height,float *length){
 }
 float find_weight(float radius,float height,float length){
 float x;
-  x =  pi * radius* (height * length);
+  x =  pi * radius* sqrt(height * length);
   return x;
 }
 void output(float radius,float length,float height,float weight){
