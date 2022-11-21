@@ -10,7 +10,7 @@ int get_n(){
   scanf("%d",&n);
   return n;
 }
-Complex input_complex(Complex a[n])
+void input_complex(int n,Complex a[n])
 {
   int i;
   i=0;
@@ -19,24 +19,26 @@ Complex input_complex(Complex a[n])
     scanf("%f %f",&a[i].real,&a[i].image);
   }
 }
-Complex add(complex a[n]){
+Complex add(int n,Complex a[n]){
   int i;
-  i-0;
+  i=0;
+  struct complexno sum={0,0};
+
   for(i=0;i<n;i++){
-    add.real += a[i].real;
-    add.image += a[i].image;      
+    sum.real=a[i].real+sum.real;
+    sum.image = a[i].image+sum.image;
+    return sum;
   }
-  return add;
 }
-void output(complex add)
+void output(Complex add)
 {
-  printf("the sum is %f",add);
+  printf("the sum is %fi",add);
 }
 int main(){
   int n;
-  complex a[n];
-   get_n();
- a=input_Complex(a[n]);
-  y=add(a);
+  Complex a[n],y;
+   n=get_n();  
+ input_complex(n,a);
+  y=add(n,a);
   output(y);
 }
