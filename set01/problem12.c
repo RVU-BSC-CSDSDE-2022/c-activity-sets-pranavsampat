@@ -36,9 +36,9 @@ void output(int n,Complex a[n],Complex add)
 {int i;
   i=0;
   for(i=0;i<n;i++){
- printf("%2.f+%2.fi+",a[i].real,a[i].image);
+ printf("%2.f+%2.fi +",a[i].real,a[i].image);
 };
-  printf("=%2.f+%2.fi",add.real,add.image);
+  printf("  = %2.f+%2.fi",add.real,add.image);
   }
 int main(){
   int n;

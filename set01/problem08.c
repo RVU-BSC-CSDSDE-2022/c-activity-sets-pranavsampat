@@ -42,3 +42,4 @@ int sum_n_array(int a[],int n,int total)
 void output(int total)
 {
   printf("the sum of numbers is %d", total);
+  }
