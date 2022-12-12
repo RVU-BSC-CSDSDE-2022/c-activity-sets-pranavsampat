@@ -19,12 +19,6 @@ int check_scalene(int a,int b,int c){
   if(a==b&&b==c){
     return 1;
   }
-//   else if(b==c&&c==a){
-//     return 2;
-//   }
-// else if(c==a&&b==a){
-//   return 3;
-// }
   else{
     return 4;
   }}
