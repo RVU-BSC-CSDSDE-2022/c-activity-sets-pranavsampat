@@ -15,14 +15,11 @@ int is_composite(int n){
   }return count;
   }
 void output(int n,int result){
-  if(result>2){
-    printf("%d is a composite number",n);
-  }
-  else if(result==2){
+  if(result==2){
     printf("%d is a prime number",n);
   }
-  else {
-    printf("%d is neither prime nor composite",n);
+  else{
+    printf("%d is a composite number",n);
   }
 }
 int main(){
