@@ -14,8 +14,8 @@ void str_reverse(char *str, char *rev_str){
   for(i=0;i<x/2;i++){
   // while(str[i]!='\0'){
     y=str[i];
-    str[i]=str[x - i - 1];
-    str[x - i - 1]=y;
+    str[i]=str[x-i-1];
+    str[x-i-1]=y;
   }
 }
 void output(char *a, char *reverse_a){
