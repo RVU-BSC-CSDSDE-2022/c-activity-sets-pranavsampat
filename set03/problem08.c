@@ -38,7 +38,7 @@ void find_n_areas(int n,triangle t[n]){
   }
 }
 triangle smallest_area(int n,triangle t[n]){
-triangle smallest={100,100,100};
+triangle smallest={0,0,0};
   int i;
   for(i=0;i<n;i++){
     if(smallest.area<t[i].area){
