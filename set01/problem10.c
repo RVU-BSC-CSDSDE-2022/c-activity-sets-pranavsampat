@@ -24,8 +24,11 @@ int stringcompare(char*string1,char*string2)
   if(string1[i]>string2[i]){
    return 1;
   }
-  else {
+  else if (string2[i]>string1[i]){
      return 2;
+    }
+    else{
+      return 3;
     }
   }
 }
@@ -34,8 +37,12 @@ void output(char*string1,char*string2,int result)
   if(result==1){
     printf("the greatest is %s",string1);
   }
-  else
+  else if (result==2){
     printf("the greatest is %s",string2);
+  }
+  else{
+    printf("strings are equal");
+  }
   }
 
 
