@@ -32,5 +32,5 @@ void output(int res){
     printf("%d its a nice name",res);
   }
   else{
-    printf("ntg");
+    printf("its not a nice name");
 }}
