@@ -6,10 +6,10 @@ void input(char *name);
  void output(int res);
 int main(){
   char name[100];
-  int res;
+  int x;
 input(name);
-  res= has_nice_name(name);
-  output(res); 
+  x= has_nice_name(name);
+  output(x); 
 }
 void input(char *name){
   printf("enter name");
