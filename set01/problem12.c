@@ -6,7 +6,8 @@
 typedef struct complexno Complex;
 void input_complex(int n,Complex a[n]);
 Complex add(int n,Complex a[n]);
-int get_n(){
+int get_n()
+{
   int n;
   printf("enter array size");
   scanf("%d",&n);
@@ -21,26 +22,36 @@ void input_complex(int n,Complex a[n])
     scanf("%f %f",&a[i].real,&a[i].image);
   }
 }
-Complex add(int n,Complex a[n]){
+Complex add(int n,Complex a[n])
+{
   int i;
   i=0;
   Complex sum={0,0};
 
-  for(i=0;i<n;i++){
+  for(i=0;i<n;i++)
+  {
     sum.real=a[i].real+sum.real;
     sum.image = a[i].image+sum.image;
   }
   return sum;
 }
 void output(int n,Complex a[n],Complex add)
-{int i;
+{
+  int i;
   i=0;
-  for(i=0;i<n;i++){
- printf("%2.f+%2.fi +",a[i].real,a[i].image);
-};
-  printf("  = %2.f+%2.fi",add.real,add.image);
+  for(i=0;i<n;i++)
+  {
+    if(i<n-1){
+ printf("%.2f+%.2fi+",a[i].real,a[i].image);
+      }
+    else {
+      printf("%.2f+%.2fi ",a[i].real,a[i].image);
+    }
   }
-int main(){
+  printf("= %.2f+%.2fi",add.real,add.image);
+  }
+int main()
+{
   int n;
   n=get_n();
   Complex a[n],y;    
