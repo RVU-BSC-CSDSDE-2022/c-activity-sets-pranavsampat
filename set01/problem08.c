@@ -13,7 +13,8 @@ int main(void)
   output(total);
   return 0;
 }
-int input_array_size(){
+int input_array_size()
+{
   int n;
   printf("enter arrazy size ");
   scanf("%d", &n);

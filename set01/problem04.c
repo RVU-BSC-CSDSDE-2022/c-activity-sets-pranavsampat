@@ -6,7 +6,8 @@ b= input();
 c=sum(a,b);
 output();
 }
-int input(int a,int b){
+int input(int a,int b)
+{
   int n;
   printf("enter a number\n");
     scanf("%d",&n);

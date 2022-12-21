@@ -6,7 +6,8 @@ int input()
   scanf("%d", &n);
     return n;
 }
-int compare(int a,int b, int c,int *largest){
+int compare(int a,int b, int c,int *largest)
+{
 if((a>=b)&&(a>=c))
 {
   largest=a;

@@ -15,7 +15,8 @@ int input()
   scanf("%d", &n);
     return n;
 }
-int compare(int a,int b, int c){
+int compare(int a,int b, int c)
+{
 int largest;
   largest=20;
 
