@@ -22,7 +22,7 @@ int find_fibo(int n)
     nth=seco;
   }
   else{
-    for(int i=2;i<n;i++){
+    for(int i=2;i<=n;i++){
       nth=first+seco;
       first=seco;
       seco=nth;
