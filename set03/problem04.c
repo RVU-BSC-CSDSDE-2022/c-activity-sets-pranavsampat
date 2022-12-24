@@ -18,7 +18,7 @@ int sum_composite_numbers(int n, int a[n]){
   int i;
   i=0;
   sum=0;
-  for(i=0;i<n;i++){
+  for(i=0;i<=n;i++){
     count=0;
     for(int j=0;j<a[i];j++){
       if(a[i]%(i+1)==0){
