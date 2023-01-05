@@ -1,48 +1,47 @@
  #include<stdio.h>
-void input_two_strings(char*string1,char*string2);
-int stringcompare(char*string1,char*string2);
-void output(char*string1,char*string2,int result);
-int main()
-{
-  int res;
-  char string1[100], string2[100];
-  input_two_strings(string1, string2);
-  res=stringcompare(string1,string2);
-  output(string1,string2,res);
-  return 0;
+void input_string(char *string1, char *string2);
+int compare(char *string1, char *string2);
+void output(char *string1, char  *string2, int result);
+void input_string(char *string1,char *string2){
+printf("enter the first string");
+scanf("%s",string1);
+printf("enter the second string");
+scanf("%s",string2);
 }
-void input_two_strings(char *string1,char *string2)
-{
-  printf("enter,strings\n");
-  scanf("%s %s",string1,string2);
+int compare(char *string1,char *string2){
+  int i;
+  int x;
+  for(i=0;i<1000;i++){
+if(string1[i]>string2[i]){
+     x=1;
 }
-int stringcompare(char*string1,char*string2)
-{
-
-  for(int i=0;i<100;i++){
-  
-  if(string1[i]>string2[i]){
-   return 1;
-  }
-  else if (string2[i]>string1[i]){
-     return 2;
+else if(string2[i]>string1[i]){
+      x=2;
+}
+    else if(string2[i]==string1[i]){
+        x=3;
+}
     }
-    else{
-      return 3;
-    }
-  }
+  return x;
 }
-void output(char*string1,char*string2,int result)
-{
-  if(result==1){
-    printf("the greatest is %s",string1);
-  }
-  else if (result==2){
-    printf("the greatest is %s",string2);
-  }
-  else{
-    printf("strings are equal");
-  }
-  }
+void output(char *string1,char *string2,int x){
+if(x==1){
+  printf("%s is greater than %s",string1,string2);
+}
+else if(x==2){
+    printf("%s is greater than %s",string2,string1);
+}
+else if(x==3){
+      printf("strings are equal");
 
+} 
+  }
+int main(){
+char string1[100],string2[100];
+int result;
+input_string(string1,string2);
+result=compare(string1,string2);
+output(string1,string2,result);
+return 0;
+}
 
