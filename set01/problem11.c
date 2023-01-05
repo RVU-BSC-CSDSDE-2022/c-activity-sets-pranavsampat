@@ -1,33 +1,33 @@
 #include<stdio.h>
-  struct complexno{
-  float real;
-  float image;
-  };
-typedef struct complexno Complex;
-Complex input_complex()
-{
-  Complex n;
-   printf("enter real and image number");
-  scanf("%f %f",&n.real,&n.image);
-  return n;
-}
-Complex add_complex(Complex a,Complex b)
-{
-  Complex sum;
-   sum.real=a.real+b.real;
-   sum.image=a.image+b.image;
-  return sum;
-}
-void output(Complex a,Complex b,Complex add,Complex sum)
-{
-  printf("%2.f+%2.fi+%2.f+%2.fi equals %2.f + %2.fi",a.real,a.image,b.real,b.image,sum.real,sum.image);
-}
+ struct complex {
+	float real;
+	float imaginary;
+};
+typedef struct complex Complex;
 
-int main()
-{
-  Complex a,b,c,add,sum;
+Complex input_complex();
+Complex add_complex(Complex a, Complex b);
+void output(Complex a, Complex b, Complex sum);
+  Complex input_complex(){
+Complex num;
+printf("enter numbers");
+scanf("%f %f",&num.real,&num.imaginary);
+return num;
+}
+ Complex add_complex(Complex a,Complex b){
+Complex sum={0,0};
+sum.real=a.real+b.real;
+sum.imaginary=a.imaginary+b.imaginary;
+return sum;
+}
+void output(Complex a,Complex b,Complex sum){
+printf("the sum of %1.f+%1.fi and %1.f+%1.fi is %1.f+%1.fi",a.real,a.imaginary,b.real,b.imaginary,sum.real,sum.imaginary);
+}
+int main(){
+Complex a,b,add;
 a=input_complex();
-b=input_complex();  
+b=input_complex();
 add=add_complex(a,b);
- output(a,b,sum,add);  
+output(a,b,add);
+return 0;
 }
