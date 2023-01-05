@@ -1,61 +1,66 @@
 #include<stdio.h>
-  struct complexno{
-  float real;
-  float image;
-  };
-typedef struct complexno Complex;
-void input_complex(int n,Complex a[n]);
-Complex add(int n,Complex a[n]);
-int get_n()
-{
-  int n;
-  printf("enter array size");
-  scanf("%d",&n);
-  return n;
-}
-void input_complex(int n,Complex a[n])
-{
-  int i;
-  i=0;
-  for(i=0;i<n;i++){
-    printf("enter real and image numbers");
-    scanf("%f %f",&a[i].real,&a[i].image);
-  }
-}
-Complex add(int n,Complex a[n])
-{
-  int i;
-  i=0;
-  Complex sum={0,0};
+struct complex {
+	float real,imaginary;
+};
+typedef struct complex Complex;
 
-  for(i=0;i<n;i++)
-  {
-    sum.real=a[i].real+sum.real;
-    sum.image = a[i].image+sum.image;
-  }
-  return sum;
+int get_n();
+Complex input_complex();
+void input_n_complex(int n, Complex c[n]);
+Complex add(Complex a, Complex b);
+Complex add_n_complex(int n, Complex c[n]);
+void output(int n, Complex c[n], Complex result);
+int get_n() {
+    int n;
+   printf("Enter the number of arrays:");
+   scanf("%d",&n);
+   return n;
 }
-void output(int n,Complex a[n],Complex add)
+Complex input_complex(){
+Complex num;
+printf("enter numbers");
+scanf("%f %f",&num.real,&num.imaginary);
+return num;
+}
+void input_n_complex(int n,Complex c[n]){
+int i;
+for(i=0;i<n;i++){
+  c[i]=input_complex();
+}
+}
+ Complex add_complex(Complex a,Complex b){
+Complex sum={0,0};
+sum.real=a.real+b.real;
+sum.imaginary=a.imaginary+b.imaginary;
+return sum;
+}
+Complex add_n_complex(int n, Complex c[n]){
+int i;
+Complex sum;
+for(i=0;i<n;i++){
+  sum=add_complex(c[i],sum);
+}
+return sum;
+}
+void output(int n, Complex c[n], Complex result)
 {
-  int i;
-  i=0;
-  for(i=0;i<n;i++)
-  {
+int i;
+for(i=0;i<n;i++){
     if(i<n-1){
- printf("%.2f+%.2fi+",a[i].real,a[i].image);
-      }
-    else {
-      printf("%.2f+%.2fi ",a[i].real,a[i].image);
+        printf("%1.f+%1.fi+",c[i].real,c[i].imaginary);
     }
-  }
-  printf("= %.2f+%.2fi",add.real,add.image);
-  }
-int main()
-{
-  int n;
-  n=get_n();
-  Complex a[n],y;    
- input_complex(n,a);
-  y=add(n,a);
-  output(n,a,y);
+    else {
+         printf("%1.f+%1.fi+",c[i].real,c[i].imaginary);
+}
+}
+printf("=%1.f+%1.fi",result.real,result.imaginary);
+}
+int main(){
+int n;
+n=get_n();
+Complex c[n],result;
+input_n_complex( n,c);
+result=add_n_complex(n,c);
+output(n,c,result);
+return 0;
 }
