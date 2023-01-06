@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<string.h>
 void input_string(char* a, char* b);
 int sub_str_index(char* string, char* substring);
 void output(char *string, char *substring, int index);
@@ -9,12 +10,10 @@ void input_string(char* a,char* b){
 int sub_str_index(char* string, char* substring){
   int i,j;
   int index;
-  for(i=0;string[i]!='\0';i++){
-    index=string[i];
-  for(j=0;substring[j]!='\0';j++){
-      index=string[i+j];
-    }
-      }
+for(i=0;string[i]!='\0';i++){  if(string[i]==substring[0]&&string[i+strlen(substring)-1]==substring[strlen(substring)-1]){
+    index=i;
+  break;
+  }}
   return index;
     }
 
