@@ -18,13 +18,14 @@ int sum_composite_numbers(int n, int a[n]){
   int i;
   i=0;
   sum=0;
-  for(i=0;i<=n;i++){
+  for(i=0;i<n;i++){
     count=0;
     for(int j=0;j<a[i];j++){
-      if(a[i]%(i+1)==0){
-        if(count>2){
+      if(a[i]%(j+1)==0){
+        if(count>=2){
           sum=sum+a[i];
-          break;}
+          break;
+          }
       else{
         count=count+1;
         }

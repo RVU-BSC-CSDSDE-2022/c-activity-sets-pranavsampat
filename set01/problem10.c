@@ -37,11 +37,11 @@ else if(x==3){
 } 
   }
 int main(){
-char string1[100],string2[100];
+char x[100],y[100];
 int result;
-input_string(string1,string2);
-result=compare(string1,string2);
-output(string1,string2,result);
+input_string(x,y);
+result=compare(x,y);
+output(x,y,result);
 return 0;
 }
 
