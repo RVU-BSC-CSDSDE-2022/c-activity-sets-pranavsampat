@@ -15,11 +15,11 @@ void str_reverse(char *str, char *rev_str){
   // while(str[i]!='\0'){
     y=str[i];
     str[i]=str[x-i-1];
-    str[x-i-1]=y;
+    str[x-i-1]=rev_str;
   }
 }
 void output(char *a, char *reverse_a){
-  printf("the reverse is %s ",a);
+  printf("the reverse %s is %s ",a,reverse_a);
 }
 int main(){
   char a[100];char b[100];
