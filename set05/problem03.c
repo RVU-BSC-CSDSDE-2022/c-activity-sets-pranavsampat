@@ -8,13 +8,14 @@ void input_n_and_r(int *n, int *r){
 }
 int nCr(int n,int r){
   int result;
+  int num,rum;
   int denom=(n-r);
-  for(int i=1;i<=n;i++){
-    n=n*i;
-    r=r*i;
-  
-    result=n/r;
+  for(int i=1;i<=n&&n>=r;i++){
+     num=n*i;
+     rum=r*i;
+    denom=denom*i;
   }
+      result=(num)/rum*(deno);
   return result;
 }
 void output(int n,int r,int result){
