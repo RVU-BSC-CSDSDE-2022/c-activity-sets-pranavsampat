@@ -8,14 +8,31 @@ void input_n_and_r(int *n, int *r){
 }
 int nCr(int n,int r){
   int result;
-  int num,rum;
-  int denom=(n-r);
+  int num=1;
+  int n_r=1;
+  int r_fact=1;
+  int den;
   for(int i=1;i<=n&&n>=r;i++){
-     num=n*i;
-     rum=r*i;
-    denom=denom*i;
+    if(i<=r)
+    {
+      r_fact=r_fact*i;    
+      n_r=n_r*i;
+      num=num*i;
+    }
+    else if(i<=n-r)
+    {
+      n_r=n_r*i;
+      num=num*i;
+    }
+    else
+    {
+      num=num*i;
+    }
   }
-      result=(num)/rum*(deno);
+  // printf("%d\n",num);
+  // printf("%d\n",r_fact);
+  // printf("%d\n",n_r);
+  result=num/(r_fact*n_r);
   return result;
 }
 void output(int n,int r,int result){

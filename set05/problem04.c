@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<math.h>
 int input_degree();
 void input_coefficients(int n, float a[n]);
 float input_x();
@@ -10,11 +11,12 @@ int input_degree(){
   scanf("%d",&n);
   return n;
 }
+
 void input_coefficients(int n,float a[n]){
   int i;
-  for(i=0;i<n;i++){
+  for(i=0;i<=n;i++){
     printf("enter value of coefficients");
-    scanf("%d",a[i]);
+    scanf("%f",&a[i]);
   }
 }
 float input_x(){
@@ -26,16 +28,16 @@ float input_x(){
 float evaluate_polynomial(int n,float a[n],float x){
   float result;
   float var;
+  var=0;
   int i;
-  a[0]=1;
-  for(int i=0;i<n;i++){
-    var=a[i]*x++;
+  for(int i=0;i<=n;i++){
+    var=var+(a[i]*pow(x,i));
   }
-  result=a[0]+var;
+  result=var;
   return result;
 }
 void output(int n,float a[n],float x,float result){
-  printf("H(%d) is = %f",n,result);
+  printf("answer is %f",result);
 }
 int main(){
   int n;
