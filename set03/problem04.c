@@ -22,7 +22,7 @@ int sum_composite_numbers(int n, int a[n]){
     count=0;
     for(int j=0;j<a[i];j++){
       if(a[i]%(j+1)==0){
-        if(count>=2){
+        if(count>2){
           sum=sum+a[i];
           break;
           }
