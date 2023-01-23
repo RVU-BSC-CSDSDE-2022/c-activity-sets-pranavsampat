@@ -39,21 +39,21 @@ void find_n_areas(int n,triangle t[n]){
 }
 triangle smallest_area(int n,triangle t[n]){
 triangle smallest;
-  smallest.area=t[0].area;
+  smallest=t[0];
   int i;
   for(i=0;i<n;i++){
     if(t[i].area<=smallest.area){
-      smallest.area=t[i].area;
+      smallest=t[i];
     }
     }
   return smallest;
     }
   
 void output(int n,triangle t[n],triangle smallest){
-  for(int i=0;i<n;i++){
-    printf("base %f,altitude%.2f and area %.2f for triangle %d\n and ",t[i].base,t[i].altitude,t[i].area,i+1);
-  }
-  printf("the smallest is %.2f",smallest.area);
+  // for(int i=0;i<n;i++){
+  //   printf("base %f,altitude%.2f and area %.2f for triangle %d\n and ",t[i].base,t[i].altitude,t[i].area,i+1);
+  // }
+  printf("the smallest triangle has base %.2f,altiude %.2f and area %.2f",smallest.base,smallest.altitude,smallest.area);
 }
 int main(){
   int n;
