@@ -49,7 +49,7 @@ void initialize_sides(int n,Polygon *p){
    for(int i=0;i<n-1;i++) {
         p->sides[i].p1=p->p[i];
         p->sides[i].p2=p->p[i+1];
-        p->sides[i].distance=finad_distance(p->sides[i].p1,p->sides[i].p2);
+        p->sides[i].distance=find_distance(p->sides[i].p1,p->sides[i].p2);
     }
      p->sides[n-1].p1=p->p[n-1];
      p->sides[n-1].p2=p->p[0];

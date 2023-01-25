@@ -3,26 +3,23 @@ void input_string(char *string1, char *string2);
 int compare(char *string1, char *string2);
 void output(char *string1, char  *string2, int result);
 void input_string(char *string1,char *string2){
-printf("enter the first string");
-scanf("%s",string1);
-printf("enter the second string");
-scanf("%s",string2);
+  printf("enter the first string");
+  scanf("%s",string1);
+  printf("enter the second string");
+  scanf("%s",string2);
 }
 int compare(char *string1,char *string2){
   int i;
   int x;
   for(i=0;string1[i]!='\0';i++){
-if(string1[i]>string2[i]){
+     if(string1[i]>string2[i]){
      x=1;
-  break;
 }
-else if(string2[i]>string1[i]){
-      x=2;
-  break;
-}
-    else if(string2[i]==string1[i]){
-        x=3;
-      break;
+      else if(string2[i]>string1[i]){
+        x=2;
+    }
+        else if(string2[i]==string1[i]){
+          x=3;
 }
     }
   return x;

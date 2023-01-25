@@ -13,8 +13,8 @@ float square_root(float n){
 float temp=0;
 float sqroot=n/2;
 while(sqroot!=temp){
-  temp=sqroot;
-  sqroot=((n/temp)+temp)/2;
+    temp=sqroot;
+    sqroot=((n/temp)+temp)/2;
 }
 return sqroot;
 }

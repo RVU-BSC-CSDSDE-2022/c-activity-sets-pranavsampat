@@ -25,12 +25,16 @@ for(i=0;i<n;i++){
     return total;
 }
 void output(int n, int a[n],int sum){
+  print(2);
+  for(1 to 3)
+    print(+ a[i
+  print(is sum)
 int i;
 for(i=0;i<n;i++){
   if(i<n-1){
     printf("%d+ ",a[i]);
 }
-  else{
+    else{
        printf("%d ",a[i]);
   }
 }
