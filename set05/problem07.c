@@ -1,5 +1,6 @@
 #include<stdio.h>
-typedef struct {
+typedef struct 
+{
     int num, den;
 } Fraction;
 
@@ -7,13 +8,15 @@ Fraction input_fraction();
 int find_gcd(int a, int b);
 Fraction add_fractions(Fraction f1, Fraction f2);
 void output(Fraction f1, Fraction f2,Fraction sum);
-Fraction input_fraction(){
+Fraction input_fraction()
+{
   Fraction n;
   printf("Enter numerator and denominator");
   scanf("%d %d",&n.num,&n.den);
   return n;
 }
-int find_gcd(int a,int b){
+int find_gcd(int a,int b)
+{
   int gcd;
   int i=0;
   for(i=1;i<=a && i<=b;i++){
@@ -23,7 +26,8 @@ int find_gcd(int a,int b){
   }
   return gcd;
 }
-Fraction add_fractions(Fraction f1,Fraction f2){
+Fraction add_fractions(Fraction f1,Fraction f2)
+{
   Fraction res;
   int num=(f1.num*f2.den+f2.num*f1.den);
   int den=(f1.den*f2.den);
@@ -33,10 +37,12 @@ Fraction add_fractions(Fraction f1,Fraction f2){
       res.den=den/i;
   return res;
 }
-void output(Fraction f1,Fraction f2,Fraction sum){
+void output(Fraction f1,Fraction f2,Fraction sum)
+{
   printf("%d/%d + %d/%d= %d/%d",f1.num,f1.den,f2.num,f2.den,sum.num,sum.den);
 }
-int main(){
+int main()
+{
   Fraction a,b;
   int gcd;
   a=input_fraction();
