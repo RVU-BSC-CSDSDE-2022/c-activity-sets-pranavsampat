@@ -27,10 +27,10 @@ void output(int n, int result)
     printf("%d is a composite number", n);
   } else if (result == 2) 
   {
-    printf("%d is a prime number", n);
+      printf("%d is a prime number", n);
   }   else 
   {
-    printf("%d is neither prime nor composite", n);
+        printf("%d is neither prime nor composite", n);
   }
 }
 int main() 

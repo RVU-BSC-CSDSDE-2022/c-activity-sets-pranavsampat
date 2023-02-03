@@ -34,6 +34,7 @@ void input_n_complex(int n, Complex c[n])
 }
 Complex add_complex(Complex a, Complex b) 
 {
+  //
   Complex sum = {0, 0};
   sum.real = a.real + b.real;
   sum.imaginary = a.imaginary + b.imaginary;

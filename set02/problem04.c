@@ -5,7 +5,7 @@ void output(float radius, float height, float length, int mood);
 void input(float *height, float *length, float *radius) 
 {
   printf("enter values for radius height and length");
-  scanf("%f %f %f", height, length, radius);
+  scanf("%f %f %f", radius, height, length);
 }
 int find_mood(float height, float length, float radius) 
 {
@@ -13,15 +13,15 @@ int find_mood(float height, float length, float radius)
   {
     return 1;
   } 
-  else if (height < length && height < radius) 
+    else if (height < length && height < radius) 
   {
       return 2;
   } 
-    else if (length < height && length < radius) 
+      else if (length < height && length < radius) 
     {
         return 3;
   } 
-      else 
+        else 
     {
           return 4;
   }

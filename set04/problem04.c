@@ -15,10 +15,10 @@ int find_fibo(int n)
   int first, seco;
   first = 0;
   seco = 1;
-  if (n == 0) {
+  if (n == 1) {
     nth = first;
   } 
-    else if (n == 1) 
+    else if (n == 2) 
   {
       nth = seco;
   } 

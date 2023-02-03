@@ -24,7 +24,8 @@ void input(int n, camel c[n], float *truckweight)
 void find_camel_weight(int n, camel c[n]) 
 {
   int i;
-  for (i = 0; i < n; i++) {
+  for (i = 0; i < n; i++) 
+  {
     c[i].weight = 3.14 * c[i].radius * sqrt(c[i].height * c[i].length);
   }
 }
@@ -34,7 +35,8 @@ float compute_total_weight(int n, camel c[n], float truckweight)
   float camelweight;
   int i;
   camel sum = {0, 0, 0, 0};
-  for (i = 0; i < n; i++) {
+  for (i = 0; i < n; i++) 
+  {
     sum.weight = sum.weight + c[i].weight;
   }
   total_weight = truckweight + sum.weight;

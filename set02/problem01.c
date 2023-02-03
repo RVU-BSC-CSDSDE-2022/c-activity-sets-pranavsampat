@@ -6,6 +6,9 @@ struct Point
   float y;
 };
 typedef struct Point point;
+point input();
+void dist(point a, point b, float *res);
+void output(point a, point b, float res);
 point input() 
 {
   point n;
@@ -13,10 +16,9 @@ point input()
   scanf("%f %f", &n.x, &n.y);
   return n;
 }
-int dist(point a, point b, float res) 
+void dist(point a, point b, float *res)
 {
-  res = sqrt(pow((b.x - a.x), 2) + pow((b.y - a.y), 2));
-  return res;
+  *res = sqrt(pow((b.x - a.x), 2) + pow((b.y - a.y), 2));
 }
 void output(point a, point b, float res) 
 {
@@ -26,9 +28,9 @@ void output(point a, point b, float res)
 int main() 
 {
   point a, b;
-  float ans, c;
+  float c;
   a = input();
   b = input();
-  ans = dist(a, b, c);
-  output(a, b, ans);
+  dist(a, b, &c);
+  output(a, b,c);
 }

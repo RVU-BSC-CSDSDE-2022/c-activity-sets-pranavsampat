@@ -17,7 +17,7 @@ camel input()
 }
 float find_weight(camel c)
 {
-  c.weight= 3.14*c.radius* sqrt(c.height * c.length);
+  c.weight= 3.14*pow(c.radius,3)* sqrt(c.height * c.length);
  return c.weight; 
 }
 void output(camel a,float y)
