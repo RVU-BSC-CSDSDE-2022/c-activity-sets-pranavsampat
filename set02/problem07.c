@@ -22,9 +22,10 @@ int has_nice_name(char *c)
         if (C == 'a' || C == 'e' || C == 'i' || C == 'o' || C == 'u') 
         {
             count++;
-        } else if (C != 'a' && C!= 'e' && C != 'i' && C!= 'o' && C!= 'u') 
+        } 
+          else if (C != 'a' && C!= 'e' && C != 'i' && C!= 'o' && C!= 'u') 
         {
-            consonant++;
+              consonant++;
         }
         i++;
     }

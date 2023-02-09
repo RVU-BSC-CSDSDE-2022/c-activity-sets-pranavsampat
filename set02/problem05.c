@@ -14,7 +14,7 @@ float borga(int x)
   float sum = 0;
   while (i > 0) 
   {
-    den = 1;
+    den = 1; 
     for (j = 1; j < ((2 * i) + 2); j++) 
     {
       den = den * j;

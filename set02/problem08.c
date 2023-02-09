@@ -32,7 +32,6 @@ void find_camel_weight(int n, camel c[n])
 float compute_total_weight(int n, camel c[n], float truckweight) 
 {
   float total_weight;
-  float camelweight;
   int i;
   camel sum = {0, 0, 0, 0};
   for (i = 0; i < n; i++) 
