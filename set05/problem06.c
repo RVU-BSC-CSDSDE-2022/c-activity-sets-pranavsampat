@@ -4,19 +4,20 @@
 void input_string(char *a);
 int count_words(char *string);
 void output(char *string, int no_words);
+
 void input_string(char a[100]) {
   printf("Enter a string of words: ");
   scanf("%[^\n]s", a);
 }
+
 int count_words(char *string) {
   int count=0;
   char copystr[100];
   strcpy(copystr,string);
-  char constant[]=" ";
-  char *token=strtok(copystr,constant);
+  char *token=strtok(copystr," ");
   while( token != NULL ) {
       count++;
-      token = strtok(NULL, constant);
+      token = strtok(NULL," ");
    }
   return count;
 }
