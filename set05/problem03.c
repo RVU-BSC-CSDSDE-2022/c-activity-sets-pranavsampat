@@ -31,9 +31,6 @@ int nCr(int n, int r)
       num = num * i;
     }
   }
-  printf("%d\n",num);
-  printf("%d\n",r_fact);
-  printf("%d\n",n_r);
   result = num / (r_fact * n_r);
   return result;
 }
