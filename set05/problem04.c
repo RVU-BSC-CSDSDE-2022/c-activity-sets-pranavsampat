@@ -44,7 +44,12 @@ float evaluate_polynomial(int n, float a[n], float x)
 }
 void output(int n, float a[n], float x, float result) 
 {
-  printf("answer is %f", result);
+  printf("H(%d,%.1f,%.1f)=",n,x,x);
+  printf("%.1f",a[0]);
+  for(int i=1;i<=n;i++){
+    printf("+%1.f*%1.f^%d",a[i],x,i);
+  }
+  printf("=%f",result);
 }
 int main() 
 {
