@@ -13,7 +13,6 @@ int nCr(int n, int r)
   int num = 1;
   int n_r = 1;
   int r_fact = 1;
-  int den;
   for (int i = 1; i <= n && n >= r; i++) 
   {
     if (i <= r) 
@@ -32,9 +31,9 @@ int nCr(int n, int r)
       num = num * i;
     }
   }
-  // printf("%d\n",num);
-  // printf("%d\n",r_fact);
-  // printf("%d\n",n_r);
+  printf("%d\n",num);
+  printf("%d\n",r_fact);
+  printf("%d\n",n_r);
   result = num / (r_fact * n_r);
   return result;
 }
