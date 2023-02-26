@@ -12,10 +12,11 @@ void input(char *name)
 }
 int has_nice_name(char *c) 
 {
-  int count, ans, i, consonant, result;
+  int count,i, consonant, result;
   char C;
   consonant = 0;
   i = 0;
+  result=0;
   count = 0;
   while (c[i] != '\0'){
       C= tolower(c[i]);
