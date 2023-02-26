@@ -47,7 +47,7 @@ void output(Fraction a,Fraction b,Fraction c,float x)
     }
       else
   {
-    printf("wrong input");
+    printf("they are all the same");
   }
 }
   int main(){

@@ -1,35 +1,33 @@
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
+
 void input_string(char *a);
 int count_words(char *string);
 void output(char *string, int no_words);
-void input_string(char *a)
-{
-  printf("enter string");
-  scanf("%[^\n]s",a);
+void input_string(char a[100]) {
+  printf("Enter a string of words: ");
+  scanf("%[^\n]s", a);
 }
-int count_words(char *a)
-{
-  int count;
-  char *token;
-  count=0;
-  token=strtok(a," ");
-  while(token!=NULL)
-  {
-    count++;
-    token=strtok(NULL," ");
-  }
+int count_words(char *string) {
+  int count=0;
+  char copystr[100];
+  strcpy(copystr,string);
+  char constant[]=" ";
+  char *token=strtok(copystr,constant);
+  while( token != NULL ) {
+      count++;
+      token = strtok(NULL, constant);
+   }
   return count;
 }
-void output(char *a,int no_words)
-{
-  printf("the words in %s is %d\n",a,no_words);
+void output(char *string, int no_words) {
+    printf("The number of words in '%s' is %d \n",string,no_words);
 }
-int main()
-{
+int main() {
   char a[100];
-  int x;
+  int no_words;
   input_string(a);
-  x=count_words(a);
-  output(a,x);
+  no_words=count_words(a);
+  output(a,no_words);
+  return 0;
 }
